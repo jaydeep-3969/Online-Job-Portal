@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="Online_Job_Portal.master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 198px;
+            text-align: center;
+        }
+        .auto-style6 {
+            height: 84px;
+            text-align: center;
+        }
+        .auto-style7 {
+            height: 46px;
+            text-align: center;
+        }
+        .auto-style11 {
+            text-align: center;
+        }
+        .auto-style12 {
+            width: 198px;
+            height: 283px;
+            text-align: center;
+        }
+        .auto-style13 {
+            width: 198px;
+            height: 258px;
+            text-align: center;
+        }
+        .auto-style14 {
+            height: 71px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <table border="1" class="auto-style1">
+            <tr>
+                 <td class="auto-style2" rowspan="2">Logo</td>
+                 <td class="auto-style6">Header</td>
+            </tr>
+         
+            <tr>
+                <td class="auto-style7">    <!-- Navigation Bar  -->
+                    <div>
+                        <asp:ContentPlaceHolder ID="navigation" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style13">    <!-- Menu -->
+                    <asp:ContentPlaceHolder ID="menu" runat="server">
+                    </asp:ContentPlaceHolder>
+                
+                  </td>
+                <td class="auto-style11" rowspan="2">     <!--  Body    -->
+                      <div>
+                        <asp:ContentPlaceHolder ID="body" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style12">    <!--  News   -->
+                
+                    Total Online Job Seekers :<br />
+                    <asp:Label ID="online_js" runat="server"></asp:Label>
+                    <br />
+                    <br />
+                    Total Online Job Providers :<br />
+                    <asp:Label ID="online_jp" runat="server"></asp:Label>
+                    <br />
+                    <br />
+                    No. Of Hired Job Seekers :<br />
+                    <asp:Label ID="hired_js" runat="server"></asp:Label>
+                    <br />
+                
+                  </td>
+            </tr>
+            <tr>
+                <td class="auto-style14" colspan="2">  <!--     Footer -->   </td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
