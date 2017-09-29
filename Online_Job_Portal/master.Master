@@ -4,15 +4,26 @@
 
 <html>
 <head runat="server">
-    <title></title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/bootstrap.css">
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+  
     <asp:ContentPlaceHolder ID="head" runat="server">
+        <!--  head content goes here  -->
+
     </asp:ContentPlaceHolder>
+    
     <style type="text/css">
         .auto-style1 {
             width: 100%;
         }
         .auto-style2 {
-            width: 198px;
+            width: 255px;
             text-align: center;
         }
         .auto-style6 {
@@ -27,12 +38,12 @@
             text-align: center;
         }
         .auto-style12 {
-            width: 198px;
+            width: 255px;
             height: 283px;
             text-align: center;
         }
         .auto-style13 {
-            width: 198px;
+            width: 255px;
             height: 258px;
             text-align: center;
         }
@@ -97,3 +108,13 @@
     </form>
 </body>
 </html>
+
+<%-- 
+    * extra content placeholder in case need more. *
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <!--  head content goes here  -->
+
+    </asp:ContentPlaceHolder>
+    
+    --%>
