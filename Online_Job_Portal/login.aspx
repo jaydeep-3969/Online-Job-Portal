@@ -33,9 +33,9 @@
     <br />
     <br />
     <br />
-    <asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
+    <asp:Button ID="btn_login" type="button" class="btn btn-success" runat="server" Text="Login" OnClick="btn_login_Click" />
 &nbsp;&nbsp;&nbsp;
-    <asp:Button ID="btn_reset" runat="server" Text="Reset" />
+    <asp:Button ID="btn_reset" type="button" class="btn btn-success" runat="server" Text="Reset" />
 
 </asp:Content>
 

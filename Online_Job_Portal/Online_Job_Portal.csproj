@@ -66,6 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\JobPortal.mdf" />
+    <Content Include="App_Data\JobPortal_log.ldf">
+      <DependentUpon>JobPortal.mdf</DependentUpon>
+    </Content>
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\bootstrap-reboot.css" />
