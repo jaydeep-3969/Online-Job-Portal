@@ -32,3 +32,4 @@ D:\My Project\dot net\Online-Job-Portal\Online_Job_Portal\bin\Microsoft.CodeDom.
 D:\My Project\dot net\Online-Job-Portal\Online_Job_Portal\obj\Debug\Online_Job_Portal.csproj.CoreCompileInputs.cache
 D:\My Project\dot net\Online-Job-Portal\Online_Job_Portal\obj\Debug\Online_Job_Portal.dll
 D:\My Project\dot net\Online-Job-Portal\Online_Job_Portal\obj\Debug\Online_Job_Portal.pdb
+D:\My Project\dot net\Online-Job-Portal\Online_Job_Portal\obj\Debug\Online_Job_Portal.csprojResolveAssemblyReference.cache
