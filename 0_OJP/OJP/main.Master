@@ -1,0 +1,238 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.Master.cs" Inherits="OJP.Site1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OJP</title>
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/my.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <%--<div class="well">
+                    <asp:Panel ID="Panel1" runat="server" Style="display:inline">
+                                    <ul class="">
+                                    <li class=""><a href="home_redirect.aspx" class="active"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+                                    <li><a href="about.aspx" class=""><span class="glyphicon glyphicon-info-sign"></span>About </a></li>
+                                    <li><a href="contact.aspx" class=""><span class="glyphicon glyphicon-phone-alt"></span>Contact Us</a></li>
+                                    </ul>
+                                </asp:Panel>
+                                <asp:Panel ID="search" runat="server" Style="display: inline">
+                                     <ul class="">
+                                    <li><a href="search.aspx" class=""><span class="glyphicon glyphicon-search"></span>Search</a></li>
+                                    </ul>
+                                </asp:Panel>
+                     
+
+                           
+                     <asp:ContentPlaceHolder ID="side_button" runat="server">
+                                
+
+                                <button type="button" class="btn btn-default " style="margin-left:10px">Logout</button>
+                         <asp:Button ID="Button1" runat="server" Text="Button" />
+                      
+                            </asp:ContentPlaceHolder>
+                </div>--%>
+
+
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <%--<asp:Panel ID="Panel2" CssClass="pull-left" runat="server">
+                                Online Job Portal
+                            </asp:Panel>--%>
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                          
+                            <img src="assets/images/Logo/brand-logo.jpg" style="width: 50px; height: 45px; margin: 5px; margin-left: 0px; padding: 0px; margin-right: 20px" />
+
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="navbar">
+                             
+                                <asp:Panel ID="Panel1" runat="server" Style="display:inline">
+                                    <ul class="nav navbar-nav">
+                                    <li class=""><a href="home_redirect.aspx" class="active"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+                                    <li><a href="about.aspx" class=""><span class="glyphicon glyphicon-info-sign"></span>  About</a></li>
+                                    <li><a href="contact_us.aspx" class=""><span class="glyphicon glyphicon-phone-alt"></span>  Contact Us</a></li>
+                                    </ul>
+                                </asp:Panel>
+                                <asp:Panel ID="search" runat="server" Style="display: inline">
+                                     <ul class="nav navbar-nav">
+                                    <li><a href="search.aspx" class=""><span class="glyphicon glyphicon-search"></span>  Search</a></li>
+                                     </ul>
+                                </asp:Panel>
+                                <asp:Panel ID="logout" runat="server" Style="display: inline">
+                                     <ul class="nav navbar-nav">
+                                    <li><a href="login.aspx" ><span class="glyphicon glyphicon-log-out" ></span> <strong>Logout</strong></a></li>
+                                    </ul>
+                                </asp:Panel>
+                            
+
+
+                            <%-- <form class="navbar-form navbar-left" runat="server">
+                                <asp:Panel ID="pnl_search" runat="server">
+                                    <asp:TextBox ID="tb_search" runat="server" TextMode="Search" ToolTip="Location, Name of job or job seeker"></asp:TextBox>
+                                    <asp:Button ID="btn_search" runat="server" Text=" Search" />
+                                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                </asp:Panel>
+                            </form>
+
+                            <%--<%--Side Buttons--88888888888888888888888888888888888888888888888888888888888888888--%>
+
+                            <asp:ContentPlaceHolder ID="side_button" runat="server">
+                                
+
+                                <button type="button" class="btn btn-default navbar-btn navbar-right" style="margin-left:10px">Logout</button>
+
+                                <button type="button" class="btn btn-default navbar-btn navbar-right"></button>
+                            </asp:ContentPlaceHolder>
+
+
+                        </div>
+                        
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>&nbsp;</div>
+        </div>
+
+
+        <%--Side Panels & Body--%>
+
+        <div class="row">
+            <%--Side Panels--%>
+
+            <div class="col-md-3">
+
+                <%--Menus--%>
+
+                <asp:Panel ID="pnl_menu" runat="server">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-info" style="min-height: 300px">
+                                <div class="panel-heading">
+                                    Menu
+                                </div>
+                                <div class="panel-body">
+                                    <div class="list-group">
+
+                                        <%--Menu-- 888888888888888888888888888888888888888888888888888888888888888888888888888 --%>
+
+                                        <asp:ContentPlaceHolder ID="menu" runat="server">
+
+                                            <div class="list-group-item"><a href="#">Hi</a></div>
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </asp:Panel>
+
+                <%--News-- 88888888888888888888888888888888888888888888888888888888888888888888888-- --%>
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-info">
+                            <div class="panel-heading">
+                                News
+                            </div>
+                            <div class="panel-body">
+                                <br />
+                                Total Available Jobs :
+                    <asp:Label ID="lbl_total_jobs" runat="server"></asp:Label><br />
+
+                                Total JobProviders :
+                    <asp:Label ID="lbl_total_jp" runat="server"></asp:Label><br />
+
+                                Total Job Seekers :
+                    <asp:Label ID="lbl_total_js" runat="server"></asp:Label><br />
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <%--Body--%>
+
+            <div class="col-md-9">
+                <div class="panel panel-success" style="min-height: 500px">
+                    <div class="panel-heading">
+
+                        <%--Body Title 8888888888888888888888888888888888888888888888888888888888888888888888888888888--%>
+
+                        <asp:ContentPlaceHolder ID="body_title" runat="server">
+                            <p>
+                                &nbsp;&nbsp;</p>
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="panel-body">
+
+                        <%--Body Container 8888888888888888888888888888888888888888888888888888888888888888888888888888888 --%>
+
+                        <asp:ContentPlaceHolder ID="body" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <%--Footer--%>
+
+        <div class="row">
+            <div class="col-md-12">
+
+
+
+                <%--<div class="well"> <p class="text-center text-primary">I am cool boy and name is rajat.</p></div>--%>
+
+                <div class="well" style="padding-bottom: 50px">
+                    <p class="text-center text-primary">
+                        @copyright 2017 DDU(Faculty of Technology)       
+                        <div class="pull-left">
+                            Created By : 
+                        
+                         <div class="label label-danger">Rajat</div>
+                            <div class="label label-danger">Jaydeep</div>
+                            <div class="label label-danger">Akash</div>
+                        </div>
+                        <div class="pull-right">
+                            Supported By : 
+                        
+                         <div class="label label-info">JMP SIR (DBS CE)</div>
+                            <div class="label label-info">PRD SIR (WDDN CE)</div>
+                            <div class="label label-info">VSP SIR (SE CE)</div>
+                        </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>

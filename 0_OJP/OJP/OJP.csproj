@@ -1,0 +1,628 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C054D50-52E8-4FE5-A325-BAF2577BECF6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OJP</RootNamespace>
+    <AssemblyName>OJP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=17.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.17.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="add_new_admin.aspx" />
+    <Content Include="admin_home.aspx" />
+    <Content Include="App_Data\JobPortal.mdf" />
+    <Content Include="App_Data\JobPortal_log.ldf">
+      <DependentUpon>JobPortal.mdf</DependentUpon>
+    </Content>
+    <Content Include="assets\css\bootstrap-theme.css" />
+    <Content Include="assets\css\bootstrap-theme.min.css" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\my.css" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\images\Back-Ground\download %281%29.jpg" />
+    <Content Include="assets\images\Back-Ground\download.jpg" />
+    <Content Include="assets\images\Back-Ground\images %281%29.jpg" />
+    <Content Include="assets\images\Back-Ground\images %282%29.jpg" />
+    <Content Include="assets\images\Back-Ground\images %283%29.jpg" />
+    <Content Include="assets\images\Back-Ground\images %284%29.jpg" />
+    <Content Include="assets\images\Back-Ground\images %285%29.jpg" />
+    <Content Include="assets\images\Back-Ground\images %286%29.jpg" />
+    <Content Include="assets\images\Back-Ground\images %287%29.jpg" />
+    <Content Include="assets\images\Back-Ground\images.jpg" />
+    <Content Include="assets\images\Logo\brand-logo.jpg" />
+    <Content Include="assets\images\Logo\download %281%29.jpg" />
+    <Content Include="assets\images\Logo\download %282%29.jpg" />
+    <Content Include="assets\images\Logo\download.jpg" />
+    <Content Include="assets\images\Logo\images.jpg" />
+    <Content Include="assets\images\Logo\images.png" />
+    <Content Include="assets\images\Plan\download %281%29.jpg" />
+    <Content Include="assets\images\Plan\download %282%29.jpg" />
+    <Content Include="assets\images\Plan\download %283%29.jpg" />
+    <Content Include="assets\images\Plan\download %284%29.jpg" />
+    <Content Include="assets\images\Plan\download.jpg" />
+    <Content Include="assets\images\Plan\images %281%29.jpg" />
+    <Content Include="assets\images\Plan\images %282%29.jpg" />
+    <Content Include="assets\images\Plan\images %283%29.jpg" />
+    <Content Include="assets\images\Plan\images %284%29.jpg" />
+    <Content Include="assets\images\Plan\images %285%29.jpg" />
+    <Content Include="assets\images\Plan\images.jpg" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\npm.js" />
+    <Content Include="connection_request_sent.aspx" />
+    <Content Include="contact_us.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="job_approved.aspx" />
+    <Content Include="profile_admin.aspx" />
+    <Content Include="profile_jp_credential.aspx" />
+    <Content Include="profile_js_preferences.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="main.Master" />
+    <Content Include="forgot_pswd.aspx" />
+    <Content Include="profile_jp_company.aspx" />
+    <Content Include="profile_jp_contact_person.aspx" />
+    <Content Include="profile_js_credential.aspx" />
+    <Content Include="profile_js_academic.aspx" />
+    <Content Include="profile_js_achievement.aspx" />
+    <Content Include="profile_js_activity.aspx" />
+    <Content Include="profile_js_project.aspx" />
+    <Content Include="profile_js_skill.aspx" />
+    <Content Include="profile_redirect.aspx" />
+    <Content Include="reference_js.aspx" />
+    <Content Include="signup_jp.aspx" />
+    <Content Include="job_referred.aspx" />
+    <Content Include="connection_overview.aspx" />
+    <Content Include="assets\css\bootstrap-theme.css.map" />
+    <Content Include="assets\css\bootstrap-theme.min.css.map" />
+    <Content Include="assets\css\bootstrap.css.map" />
+    <Content Include="assets\css\bootstrap.min.css.map" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="job_saved.aspx" />
+    <Content Include="job_applied.aspx" />
+    <Content Include="job_detailed.aspx" />
+    <Content Include="job_recommended.aspx" />
+    <Content Include="search.aspx" />
+    <Content Include="job_post.aspx" />
+    <Content Include="connection_request.aspx" />
+    <Content Include="reset_password.aspx" />
+    <Content Include="connection_refer.aspx" />
+    <Content Include="signup_jp_credential.aspx" />
+    <Content Include="posted_job.aspx" />
+    <Content Include="jp_job_detailed.aspx" />
+    <Content Include="aspirant.aspx" />
+    <Content Include="aspirant_selected.aspx" />
+    <Content Include="notification_accept.aspx" />
+    <Content Include="about.aspx" />
+    <Content Include="profile_js_experience.aspx" />
+    <Content Include="profile_js_personal.aspx" />
+    <Content Include="home_redirect.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="signup_jp_company.aspx" />
+    <Content Include="signup_jp_contact_person.aspx" />
+    <Content Include="signup_js_academic.aspx" />
+    <Content Include="signup_js_achievement.aspx" />
+    <Content Include="signup_js_activity.aspx" />
+    <Content Include="signup_js_credential.aspx" />
+    <Content Include="signup_js_experience.aspx" />
+    <Content Include="signup_js_personal.aspx" />
+    <Content Include="signup_js_preferences.aspx" />
+    <Content Include="signup_js_project.aspx" />
+    <Content Include="signup_js_skill.aspx" />
+    <Content Include="tmp_date.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="login.aspx" />
+    <Content Include="signup_js.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_new_admin.aspx.cs">
+      <DependentUpon>add_new_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_new_admin.aspx.designer.cs">
+      <DependentUpon>add_new_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_home.aspx.cs">
+      <DependentUpon>admin_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_home.aspx.designer.cs">
+      <DependentUpon>admin_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connection_request_sent.aspx.cs">
+      <DependentUpon>connection_request_sent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="connection_request_sent.aspx.designer.cs">
+      <DependentUpon>connection_request_sent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact_us.aspx.cs">
+      <DependentUpon>contact_us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact_us.aspx.designer.cs">
+      <DependentUpon>contact_us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="job_approved.aspx.cs">
+      <DependentUpon>job_approved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_approved.aspx.designer.cs">
+      <DependentUpon>job_approved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_admin.aspx.cs">
+      <DependentUpon>profile_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_admin.aspx.designer.cs">
+      <DependentUpon>profile_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_jp_credential.aspx.cs">
+      <DependentUpon>profile_jp_credential.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_jp_credential.aspx.designer.cs">
+      <DependentUpon>profile_jp_credential.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_preferences.aspx.cs">
+      <DependentUpon>profile_js_preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_preferences.aspx.designer.cs">
+      <DependentUpon>profile_js_preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_jp_company.aspx.cs">
+      <DependentUpon>profile_jp_company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_jp_company.aspx.designer.cs">
+      <DependentUpon>profile_jp_company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_jp_contact_person.aspx.cs">
+      <DependentUpon>profile_jp_contact_person.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_jp_contact_person.aspx.designer.cs">
+      <DependentUpon>profile_jp_contact_person.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_credential.aspx.cs">
+      <DependentUpon>profile_js_credential.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_credential.aspx.designer.cs">
+      <DependentUpon>profile_js_credential.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_academic.aspx.cs">
+      <DependentUpon>profile_js_academic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_academic.aspx.designer.cs">
+      <DependentUpon>profile_js_academic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_achievement.aspx.cs">
+      <DependentUpon>profile_js_achievement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_achievement.aspx.designer.cs">
+      <DependentUpon>profile_js_achievement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_activity.aspx.cs">
+      <DependentUpon>profile_js_activity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_activity.aspx.designer.cs">
+      <DependentUpon>profile_js_activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_project.aspx.cs">
+      <DependentUpon>profile_js_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_project.aspx.designer.cs">
+      <DependentUpon>profile_js_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_skill.aspx.cs">
+      <DependentUpon>profile_js_skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_skill.aspx.designer.cs">
+      <DependentUpon>profile_js_skill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_redirect.aspx.cs">
+      <DependentUpon>profile_redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_redirect.aspx.designer.cs">
+      <DependentUpon>profile_redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reference_js.aspx.cs">
+      <DependentUpon>reference_js.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reference_js.aspx.designer.cs">
+      <DependentUpon>reference_js.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js.aspx.cs">
+      <DependentUpon>signup_js.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js.aspx.designer.cs">
+      <DependentUpon>signup_js.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgot_pswd.aspx.cs">
+      <DependentUpon>forgot_pswd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgot_pswd.aspx.designer.cs">
+      <DependentUpon>forgot_pswd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_jp.aspx.cs">
+      <DependentUpon>signup_jp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_jp.aspx.designer.cs">
+      <DependentUpon>signup_jp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_referred.aspx.cs">
+      <DependentUpon>job_referred.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_referred.aspx.designer.cs">
+      <DependentUpon>job_referred.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connection_overview.aspx.cs">
+      <DependentUpon>connection_overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="connection_overview.aspx.designer.cs">
+      <DependentUpon>connection_overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_saved.aspx.cs">
+      <DependentUpon>job_saved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_saved.aspx.designer.cs">
+      <DependentUpon>job_saved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_applied.aspx.cs">
+      <DependentUpon>job_applied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_applied.aspx.designer.cs">
+      <DependentUpon>job_applied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_detailed.aspx.cs">
+      <DependentUpon>job_detailed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_detailed.aspx.designer.cs">
+      <DependentUpon>job_detailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_recommended.aspx.cs">
+      <DependentUpon>job_recommended.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_recommended.aspx.designer.cs">
+      <DependentUpon>job_recommended.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search.aspx.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.aspx.designer.cs">
+      <DependentUpon>search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_post.aspx.cs">
+      <DependentUpon>job_post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_post.aspx.designer.cs">
+      <DependentUpon>job_post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connection_request.aspx.cs">
+      <DependentUpon>connection_request.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="connection_request.aspx.designer.cs">
+      <DependentUpon>connection_request.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reset_password.aspx.cs">
+      <DependentUpon>reset_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reset_password.aspx.designer.cs">
+      <DependentUpon>reset_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="connection_refer.aspx.cs">
+      <DependentUpon>connection_refer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="connection_refer.aspx.designer.cs">
+      <DependentUpon>connection_refer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_jp_credential.aspx.cs">
+      <DependentUpon>signup_jp_credential.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_jp_credential.aspx.designer.cs">
+      <DependentUpon>signup_jp_credential.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_jp_company.aspx.cs">
+      <DependentUpon>signup_jp_company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_jp_company.aspx.designer.cs">
+      <DependentUpon>signup_jp_company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_jp_contact_person.aspx.cs">
+      <DependentUpon>signup_jp_contact_person.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_jp_contact_person.aspx.designer.cs">
+      <DependentUpon>signup_jp_contact_person.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_academic.aspx.cs">
+      <DependentUpon>signup_js_academic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_academic.aspx.designer.cs">
+      <DependentUpon>signup_js_academic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_achievement.aspx.cs">
+      <DependentUpon>signup_js_achievement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_achievement.aspx.designer.cs">
+      <DependentUpon>signup_js_achievement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_activity.aspx.cs">
+      <DependentUpon>signup_js_activity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_activity.aspx.designer.cs">
+      <DependentUpon>signup_js_activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_credential.aspx.cs">
+      <DependentUpon>signup_js_credential.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_credential.aspx.designer.cs">
+      <DependentUpon>signup_js_credential.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_experience.aspx.cs">
+      <DependentUpon>signup_js_experience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_experience.aspx.designer.cs">
+      <DependentUpon>signup_js_experience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_personal.aspx.cs">
+      <DependentUpon>signup_js_personal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_personal.aspx.designer.cs">
+      <DependentUpon>signup_js_personal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_preferences.aspx.cs">
+      <DependentUpon>signup_js_preferences.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_preferences.aspx.designer.cs">
+      <DependentUpon>signup_js_preferences.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_project.aspx.cs">
+      <DependentUpon>signup_js_project.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_project.aspx.designer.cs">
+      <DependentUpon>signup_js_project.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup_js_skill.aspx.cs">
+      <DependentUpon>signup_js_skill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup_js_skill.aspx.designer.cs">
+      <DependentUpon>signup_js_skill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="posted_job.aspx.cs">
+      <DependentUpon>posted_job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="posted_job.aspx.designer.cs">
+      <DependentUpon>posted_job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="jp_job_detailed.aspx.cs">
+      <DependentUpon>jp_job_detailed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jp_job_detailed.aspx.designer.cs">
+      <DependentUpon>jp_job_detailed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspirant.aspx.cs">
+      <DependentUpon>aspirant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspirant.aspx.designer.cs">
+      <DependentUpon>aspirant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aspirant_selected.aspx.cs">
+      <DependentUpon>aspirant_selected.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aspirant_selected.aspx.designer.cs">
+      <DependentUpon>aspirant_selected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="notification_accept.aspx.cs">
+      <DependentUpon>notification_accept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="notification_accept.aspx.designer.cs">
+      <DependentUpon>notification_accept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_experience.aspx.cs">
+      <DependentUpon>profile_js_experience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_experience.aspx.designer.cs">
+      <DependentUpon>profile_js_experience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profile_js_personal.aspx.cs">
+      <DependentUpon>profile_js_personal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profile_js_personal.aspx.designer.cs">
+      <DependentUpon>profile_js_personal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="home_redirect.aspx.cs">
+      <DependentUpon>home_redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home_redirect.aspx.designer.cs">
+      <DependentUpon>home_redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tmp_date.aspx.cs">
+      <DependentUpon>tmp_date.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tmp_date.aspx.designer.cs">
+      <DependentUpon>tmp_date.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="assets\natural\" />
+    <Folder Include="ProfilePics\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51401</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51401/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
